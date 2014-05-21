@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+    <name>hw1-106692-typesystem</name>
+    <description/>
+    <version>1.0</version>
+    <vendor/>
+  <types>
+    <typeDescription>
+      <name>Question</name>
+      <description/>
+      <supertypeName>Sentence</supertypeName>
+      <features>
+				<featureDescription>
+					<name>Answers</name>
+					<description>Building containing this room</description>
+					<rangeTypeName>Answer</rangeTypeName>
+					</featureDescription>
+				</features>
+				</typeDescription>
+    <typeDescription>
+      <name>Answer</name>
+      <description/>
+      <supertypeName>Sentence</supertypeName>
+      <features>
+				<featureDescription>
+					<name>Score</name>
+					<description>Building containing this room</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
+				</featureDescription>
+			<featureDescription>
+          <name>CorrectAnswer</name>
+          <description/>
+          <rangeTypeName>uima.cas.Boolean</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+  <typeDescription>
+      <name>Sentence</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+				<featureDescription>
+					<name>Ngrams</name>
+					<description>Building containing this room</description>
+					<rangeTypeName>Ngrams</rangeTypeName>
+					</featureDescription>
+				</features>
+				</typeDescription>
+  <typeDescription>
+      <name>Ngrams</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>Tokens</name>
+          <description/>
+          <rangeTypeName>uima.cas.Integer</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>PrecisionN</name>
+          <description/>
+          <rangeTypeName>uima.cas.Boolean</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+  </types>
+</typeSystemDescription>
